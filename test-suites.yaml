@@ -1,0 +1,20 @@
+version: "3"
+services:
+  reservation-app:
+    image: abhi056/selenium
+    environment:
+    - BROWSER=chrome
+    - HUB_HOST=hub
+    - THREAD_COUNT=3
+    - TEST_SUITE=flight-reservation.xml
+    volumes:
+    - ./output/reservation-app:/home/selenium-docker/test-output
+  vendor-portal:
+    image: abhi056/selenium
+    environment:
+    - BROWSER=firefox
+    - HUB_HOST=hub
+    - THREAD_COUNT=3
+    - TEST_SUITE=vendor-portal.xml
+    volumes:
+    - ./output/vendor-portal:/home/selenium-docker/test-output
