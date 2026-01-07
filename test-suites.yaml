@@ -1,7 +1,7 @@
 version: "3"
 services:
   reservation-app:
-    image: abhi056/selenium
+    image: abhishek056/selenium
     environment:
     - BROWSER=chrome
     - HUB_HOST=hub
@@ -10,7 +10,7 @@ services:
     volumes:
     - ./output/reservation-app:/home/selenium-docker/test-output
   vendor-portal:
-    image: abhi056/selenium
+    image: abhishek056/selenium
     environment:
     - BROWSER=firefox
     - HUB_HOST=hub
